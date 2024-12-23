@@ -1,19 +1,26 @@
-// JavaScript for form validation and dynamic feedback
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission for demo purposes
+// Login form validation
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-    // Get form values
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const correctUsername = "user";
+    const correctPassword = "password123";
 
-    // Basic form validation
-    if (name === "" || email === "" || message === "") {
-        document.getElementById("form-message").textContent = "Please fill in all fields.";
-        document.getElementById("form-message").style.color = "red";
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === correctUsername && password === correctPassword) {
+        alert("Login successful!");
+        // Redirect to another page, for example:
+        // window.location.href = 'dashboard.html';
     } else {
-        document.getElementById("form-message").textContent = "Thank you for contacting us! We will get back to you soon.";
-        document.getElementById("form-message").style.color = "green";
-        document.getElementById("contact-form").reset(); // Reset the form after successful submission
+        document.getElementById('error-message').style.display = 'block';
     }
 });
+
+// Contact form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    alert("Your message has been sent! We will get back to you shortly.");
+});
+
