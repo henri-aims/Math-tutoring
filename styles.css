@@ -45,63 +45,69 @@ footer {
 }
 
 /* Main Content Styles */
-.main, .login-container, .contact-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+main {
+    margin: 50px;
+}
+
+.hero {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.testimonials, .resources, .youtube-channels {
+    margin-top: 30px;
     background-color: white;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-h2, h3 {
-    text-align: center;
-    color: #333;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
+.testimonial {
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.testimonials h3, .resources h3, .youtube-channels h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-.error-message {
-    color: red;
-    text-align: center;
-}
-
-.features ul {
+.resources ul, .youtube-channels ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
-.features ul li {
+.resources ul li, .youtube-channels ul li {
     margin: 10px 0;
 }
 
-#contact-info {
-    margin-top: 30px;
-    text-align: center;
+.resources ul li a, .youtube-channels ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.resources ul li a:hover, .youtube-channels ul li a:hover {
+    text-decoration: underline;
 }
