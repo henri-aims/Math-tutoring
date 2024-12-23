@@ -24,3 +24,4 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     alert("Your message has been sent! We will get back to you shortly.");
 });
 
+
