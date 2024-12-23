@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Math Tutoring account and access personalized math tutoring sessions.">
+    <meta name="author" content="Math Tutoring">
+    <meta name="robots" content="index, follow">
     <title>Login - Math Tutoring</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="logo">
             <h1>Math Tutoring</h1>
@@ -19,29 +24,47 @@
         </nav>
     </header>
 
+    <!-- Main Content Section -->
     <main>
-        <div class="login-container">
+        <section class="login-container">
             <h2>Login to Your Account</h2>
-            <form id="login-form">
+            <p>Enter your username and password to access personalized tutoring sessions.</p>
+
+            <!-- Login Form -->
+            <form id="login-form" action="submit_login.php" method="POST" novalidate>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required placeholder="Enter your username" aria-required="true" aria-describedby="username-help">
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required placeholder="Enter your password" aria-required="true" aria-describedby="password-help">
 
-                <button type="submit">Login</button>
+                <button type="submit" class="btn">Login</button>
             </form>
 
+            <!-- Error Message -->
             <div id="error-message" class="error-message" style="display:none;">
-                <p>Incorrect username or password!</p>
+                <p>Incorrect username or password! Please try again.</p>
             </div>
-        </div>
+
+            <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Math Tutoring | All Rights Reserved</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Math Tutoring | All Rights Reserved</p>
+            <nav>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
+    <!-- External JavaScript for Form Validation and Error Handling -->
     <script src="script.js"></script>
 </body>
 </html>
+
