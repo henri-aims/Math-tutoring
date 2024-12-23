@@ -4,116 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematics Tutoring</title>
-    <style>
-        /* Basic body styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-
-        /* Header section styling */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Main header */
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        /* Sub-header (tagline) */
-        header p {
-            font-size: 1.2rem;
-            font-style: italic;
-        }
-
-        /* Navigation bar styling */
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-
-        /* Navigation link styling */
-        nav a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2rem;
-        }
-
-        /* Hover effect on links */
-        nav a:hover {
-            background-color: #555;
-        }
-
-        /* Main container for sections */
-        .container {
-            padding: 20px;
-        }
-
-        /* Section styling */
-        .services, .testimonials, .resources, .contact {
-            margin-bottom: 40px;
-        }
-
-        /* Section headers */
-        h2 {
-            color: #333;
-            font-size: 2rem;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        /* Individual service or testimonial items */
-        .service-item, .testimonial-item {
-            margin-bottom: 20px;
-        }
-
-        /* Footer styling */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Styling for form elements */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        form button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        form button:hover {
-            background-color: #555;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -181,22 +72,19 @@
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>If you are ready to start your learning journey or have any questions, feel free to contact us:</p>
-        <form action="#" method="post">
-            <!-- Name Input -->
+        <form id="contact-form" action="#" method="post">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
-            
-            <!-- Email Input -->
+
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
-            
-            <!-- Message Input -->
+
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            
-            <!-- Submit Button -->
+
             <button type="submit">Submit</button>
         </form>
+        <p id="form-message"></p>
     </section>
 </div>
 
@@ -204,6 +92,8 @@
 <footer class="footer">
     <p>&copy; 2024 Mathematics Tutoring | All Rights Reserved</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
